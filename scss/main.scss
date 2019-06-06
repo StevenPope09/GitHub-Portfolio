@@ -1,1 +1,27 @@
 // main.scss
+html{
+    font-size: 62.5%;
+
+}
+body{
+    font: 1.6rem/1.25 "Program OT Book", arial, sans-serif;
+    background: gray;
+}
+#tasks{
+    display: flex;
+    flex-flow: row wrap;
+}
+article{
+    border: 2px solid gray;
+    background-color: white;
+}
+#tasks p{
+    max-width: calc(50%);
+}
+.date{
+    display: flex;
+    align-content: flex-end;
+    
+    color: green;
+    
+}
