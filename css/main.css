@@ -39,3 +39,7 @@ article {
 #tasks section {
   max-width: calc(100%/3 - 2rem);
   margin-left: 2rem; }
+
+.wrapper {
+  max-width: 1500px;
+  margin: 0 auto; }

@@ -28,8 +28,6 @@ header h1{
 #tasks{
     display: flex;
     flex-flow: row wrap;
-    
-    
 }
 article{
     border: 2px double gray;
@@ -52,4 +50,8 @@ article{
 #tasks section{
     max-width: calc(100%/3 - 2rem);
     margin-left: 2rem;
+}
+.wrapper{
+    max-width: 1500px;
+    margin: 0 auto;
 }
