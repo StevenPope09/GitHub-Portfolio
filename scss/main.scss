@@ -1,27 +1,55 @@
 // main.scss
+$margin-left: 1rem;
+$padding-left: 2rem;
+$secondary-color: #3C91E6;
+$off-Color: #fff;
+$body-color: #E8EBE4;
+$botmarg: 2rem;
+
 html{
     font-size: 62.5%;
 
 }
 body{
-    font: 1.6rem/1.25 "Program OT Book", arial, sans-serif;
-    background: gray;
+    font: 1.6rem/1 "Program OT Book", arial, sans-serif;
+    background: $body-color;
+}
+header{
+    background: $secondary-color;
+    height: 10rem;
+    position: relative;
+    bottom: 2.5rem;
+}
+header h1{
+    padding-top:3rem;
+    margin-left: 5%;
+    color: $off-Color;
 }
 #tasks{
     display: flex;
     flex-flow: row wrap;
+    
+    
 }
 article{
-    border: 2px solid gray;
-    background-color: white;
+    border: 2px double gray;
+    background-color: $off-Color;
+    padding-left: $padding-left;
+    padding-right: 2rem;
+    margin-bottom: $botmarg;
+    
 }
 #tasks p{
-    max-width: calc(50%);
+    display: flex;
+    word-wrap: break-word;
 }
 .date{
     display: flex;
     align-content: flex-end;
-    
     color: green;
     
+}
+#tasks section{
+    max-width: calc(100%/3 - 2rem);
+    margin-left: 2rem;
 }

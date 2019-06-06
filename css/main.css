@@ -2,21 +2,40 @@ html {
   font-size: 62.5%; }
 
 body {
-  font: 1.6rem/1.25 "Program OT Book", arial, sans-serif;
-  background: gray; }
+  font: 1.6rem/1 "Program OT Book", arial, sans-serif;
+  background: #E8EBE4; }
+
+header {
+  background: #3C91E6;
+  height: 10rem;
+  position: relative;
+  bottom: 2.5rem; }
+
+header h1 {
+  padding-top: 3rem;
+  margin-left: 5%;
+  color: #fff; }
 
 #tasks {
   display: flex;
   flex-flow: row wrap; }
 
 article {
-  border: 2px solid gray;
-  background-color: white; }
+  border: 2px double gray;
+  background-color: #fff;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-bottom: 2rem; }
 
 #tasks p {
-  max-width: calc(50%); }
+  display: flex;
+  word-wrap: break-word; }
 
 .date {
   display: flex;
   align-content: flex-end;
   color: green; }
+
+#tasks section {
+  max-width: calc(100%/3 - 2rem);
+  margin-left: 2rem; }
