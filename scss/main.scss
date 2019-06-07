@@ -25,11 +25,38 @@ header h1{
     margin-left: 5%;
     color: $off-Color;
 }
+#tasks div{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+article img{
+    margin-left: 70%;
+    margin-top: 2%;
+    width: 30px;
+    height: 30px;
+}
+/*
+article img{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    bottom: 1rem;
+    left: 32rem;
+}
+*/
+article .date{
+    display: flex;
+    justify-content: flex-end;
+}
 #tasks{
     display: flex;
+    justify-content: space-between;
     flex-flow: row wrap;
 }
 article{
+    
     border: 2px double gray;
     background-color: $off-Color;
     padding-left: $padding-left;
