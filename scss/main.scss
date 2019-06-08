@@ -7,16 +7,17 @@ $body-color: #E8EBE4;
 $botmarg: 2rem;
 
 html{
-    font-size: 62.5%;
+    font-size: 14px;
 
 }
 body{
-    font: 1.6rem/1 "Program OT Book", arial, sans-serif;
+    
     background: $body-color;
 }
 header{
     background: $secondary-color;
-    height: 10rem;
+    height: 7rem;
+    width: 100%;
     position: relative;
     bottom: 2.5rem;
 }
@@ -25,60 +26,175 @@ header h1{
     margin-left: 5%;
     color: $off-Color;
 }
-#tasks div{
-    display:flex;
-    flex-direction: row;
-    justify-content: space-between;
+article img{
     
+    float: left;
+    width: 15px;
+    height: 15px;
+    padding-right: 1em;
 }
-article img{
-    margin-left: 70%;
-    margin-top: 2%;
-    width: 30px;
-    height: 30px;
-}
-/*
-article img{
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    bottom: 1rem;
-    left: 32rem;
-}
-*/
-article .date{
-    display: flex;
-    justify-content: flex-end;
-}
-#tasks{
-    display: flex;
-    justify-content: space-between;
-    flex-flow: row wrap;
-}
+
 article{
     
     border: 2px double gray;
     background-color: $off-Color;
     padding-left: $padding-left;
-    padding-right: 2rem;
+    padding-right: 10px;
     margin-bottom: $botmarg;
-    
 }
+#tasks #heading{
+    
+    display: flex;
+    justify-content: space-between;
+
+}
+#tasks{
+    @media(min-width:600px){
+        
+        margin-right: 2em;
+    }
+}
+@media(mind-width:1300px){
+#tasks div{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+} 
+}
+
 #tasks p{
     display: flex;
     word-wrap: break-word;
 }
 .date{
-    display: flex;
-    align-content: flex-end;
+    
     color: green;
     
 }
 #tasks section{
-    max-width: calc(100%/3 - 2rem);
-    margin-left: 2rem;
+    max-width: 100%;
+    margin-left: 2em;
+    
 }
 .wrapper{
     max-width: 1500px;
     margin: 0 auto;
+}
+button:hover{
+    background: #3C91E6;
+    color: #fff;
+}
+
+@media(min-width:600px){
+    html{
+        font-size: 16px;
+    }
+    #tasks p{
+        word-wrap: none;
+    }
+}
+@media(min-width: 800px){
+    html{
+        font-size: 16px
+    }
+    article{
+        max-width: calc(100%/3-2em);
+    }
+    #tasks{
+        display: flex;
+        justify-content: space-between;
+    }
+    #tasks section{
+        max-width: calc(100%/3 - 2rem);
+        margin-left: 2rem;
+    }
+    #tasks div{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        
+    }
+    article div{
+        display: flex;
+        justify-content: center;
+    }
+    article{
+        position: relative;
+    }
+    article img{
+        position: absolute;
+        left: 1em;
+        bottom: 1em;
+        width: 20px;
+        height:20px;
+        
+    }
+    .date{
+        margin-left: 1em;
+    }
+    
+}
+@media(min-width: 1300px){
+    html{
+        font-size: 62.5%;
+    
+    }
+    body{
+        font: 1.6rem/1 "Program OT Book", arial, sans-serif;
+        background: $body-color;
+    }
+    header{
+        background: $secondary-color;
+        height: 10rem;
+        position: relative;
+        bottom: 2.5rem;
+    }
+    header h1{
+        padding-top:3rem;
+        margin-left: 5%;
+        color: $off-Color;
+    }
+    #tasks div{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        
+    }
+    article img{
+        bottom: .45;
+        width: 30px;
+        height: 30px;
+    }
+    /*
+    article img{
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        bottom: 1rem;
+        left: 32rem;
+    }
+    */
+    article .date{
+        display: flex;
+        justify-content: flex-end;
+    }
+    #tasks{
+        display: flex;
+        justify-content: space-between;
+        flex-flow: row wrap;
+    }
+    .date{
+        display: flex;
+        align-content: flex-end;
+        margin-left: 2em;
+    }
+    #tasks section{
+        max-width: calc(100%/3 - 2rem);
+        margin-left: 2rem;
+    }
+    .wrapper{
+        max-width: 1500px;
+        margin: 0 auto;
+    }
+    
 }
