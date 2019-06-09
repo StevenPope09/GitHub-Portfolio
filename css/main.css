@@ -2,6 +2,7 @@ html {
   font-size: 14px; }
 
 body {
+  font: "Times New Roman", Times, serif;
   background: #E8EBE4; }
 
 header {
@@ -58,19 +59,21 @@ article {
   max-width: 1500px;
   margin: 0 auto; }
 
+button {
+  background: #fff;
+  color: #000; }
+
 button:hover {
   background: #3C91E6;
   color: #fff; }
 
 @media (min-width: 600px) {
-  html {
-    font-size: 16px; }
+  font-size: 16px;
   #tasks p {
     word-wrap: none; } }
 
 @media (min-width: 800px) {
-  html {
-    font-size: 16px; }
+  font-size: 18px;
   article {
     max-width: calc(100%/3-2em); }
   #tasks {
@@ -101,7 +104,7 @@ button:hover {
   html {
     font-size: 62.5%; }
   body {
-    font: 1.6rem/1 "Program OT Book", arial, sans-serif;
+    font: 1.6rem/1 "Times New Roman", Times, serif;
     background: #E8EBE4; }
   header {
     background: #3C91E6;
@@ -118,17 +121,8 @@ button:hover {
     justify-content: space-between; }
   article img {
     bottom: .45;
-    width: 30px;
-    height: 30px; }
-  /*
-    article img{
-        width: 30px;
-        height: 30px;
-        position: absolute;
-        bottom: 1rem;
-        left: 32rem;
-    }
-    */
+    width: 25px;
+    height: 25px; }
   article .date {
     display: flex;
     justify-content: flex-end; }

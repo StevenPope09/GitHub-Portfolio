@@ -5,13 +5,20 @@ $secondary-color: #3C91E6;
 $off-Color: #fff;
 $body-color: #E8EBE4;
 $botmarg: 2rem;
+$font-family: "Times New Roman", Times, serif;
+
+@mixin font($fontsize) {
+    font-size: $fontsize;
+}
+
+
 
 html{
-    font-size: 14px;
+    @include font(14px);
 
 }
 body{
-    
+    font: $font-family; 
     background: $body-color;
 }
 header{
@@ -80,23 +87,24 @@ article{
     max-width: 1500px;
     margin: 0 auto;
 }
+button{
+    background: $off-Color;
+    color: #000;
+}
 button:hover{
     background: #3C91E6;
     color: #fff;
 }
 
 @media(min-width:600px){
-    html{
-        font-size: 16px;
-    }
+    @include font(16px);
+
     #tasks p{
         word-wrap: none;
     }
 }
 @media(min-width: 800px){
-    html{
-        font-size: 16px
-    }
+    @include font(18px);
     article{
         max-width: calc(100%/3-2em);
     }
@@ -136,11 +144,11 @@ button:hover{
 }
 @media(min-width: 1300px){
     html{
-        font-size: 62.5%;
+        @include font(62.5%);
     
     }
     body{
-        font: 1.6rem/1 "Program OT Book", arial, sans-serif;
+        font: 1.6rem/1 $font-family;
         background: $body-color;
     }
     header{
@@ -162,18 +170,10 @@ button:hover{
     }
     article img{
         bottom: .45;
-        width: 30px;
-        height: 30px;
+        width: 25px;
+        height: 25px;
     }
-    /*
-    article img{
-        width: 30px;
-        height: 30px;
-        position: absolute;
-        bottom: 1rem;
-        left: 32rem;
-    }
-    */
+    
     article .date{
         display: flex;
         justify-content: flex-end;
