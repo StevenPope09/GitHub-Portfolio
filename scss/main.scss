@@ -4,17 +4,16 @@ $padding-left: 2rem;
 $secondary-color: #3C91E6;
 $off-Color: #fff;
 $body-color: #E8EBE4;
+$text-color: #0F1108;
 $botmarg: 2rem;
 $font-family: "Times New Roman", Times, serif;
 
-@mixin font($fontsize) {
+@mixin font($fontsize,$color) {
     font-size: $fontsize;
+    color: $color;
 }
-
-
-
 html{
-    @include font(14px);
+    @include font(14px, $text-color);
 
 }
 body{
@@ -25,8 +24,8 @@ header{
     background: $secondary-color;
     height: 7rem;
     width: 100%;
-    position: relative;
-    bottom: 2.5rem;
+    margin-top: 0;
+    
 }
 header h1{
     padding-top:3rem;
@@ -46,7 +45,7 @@ article{
     border: 2px double gray;
     background-color: $off-Color;
     padding-left: $padding-left;
-    padding-right: 10px;
+    padding-right: $padding-left;
     margin-bottom: $botmarg;
 }
 #tasks #heading{
@@ -97,14 +96,18 @@ button:hover{
 }
 
 @media(min-width:600px){
-    @include font(16px);
+    html{
+    @include font(16px, $text-color);
+    }
 
     #tasks p{
         word-wrap: none;
     }
 }
 @media(min-width: 800px){
-    @include font(18px);
+    html{
+    @include font(18px, $text-color);
+    }
     article{
         max-width: calc(100%/3-2em);
     }
@@ -144,7 +147,7 @@ button:hover{
 }
 @media(min-width: 1300px){
     html{
-        @include font(62.5%);
+        @include font(62.5%,$text-color);
     
     }
     body{
@@ -154,8 +157,7 @@ button:hover{
     header{
         background: $secondary-color;
         height: 10rem;
-        position: relative;
-        bottom: 2.5rem;
+        margin-top: 0;
     }
     header h1{
         padding-top:3rem;
@@ -169,7 +171,7 @@ button:hover{
         
     }
     article img{
-        bottom: .45;
+        bottom: 1em;
         width: 25px;
         height: 25px;
     }

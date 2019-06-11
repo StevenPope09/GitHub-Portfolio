@@ -1,5 +1,6 @@
 html {
-  font-size: 14px; }
+  font-size: 14px;
+  color: #0F1108; }
 
 body {
   font: "Times New Roman", Times, serif;
@@ -9,8 +10,7 @@ header {
   background: #3C91E6;
   height: 7rem;
   width: 100%;
-  position: relative;
-  bottom: 2.5rem; }
+  margin-top: 0; }
 
 header h1 {
   padding-top: 3rem;
@@ -27,7 +27,7 @@ article {
   border: 2px double gray;
   background-color: #fff;
   padding-left: 2rem;
-  padding-right: 10px;
+  padding-right: 2rem;
   margin-bottom: 2rem; }
 
 #tasks #heading {
@@ -68,12 +68,16 @@ button:hover {
   color: #fff; }
 
 @media (min-width: 600px) {
-  font-size: 16px;
+  html {
+    font-size: 16px;
+    color: #0F1108; }
   #tasks p {
     word-wrap: none; } }
 
 @media (min-width: 800px) {
-  font-size: 18px;
+  html {
+    font-size: 18px;
+    color: #0F1108; }
   article {
     max-width: calc(100%/3-2em); }
   #tasks {
@@ -102,15 +106,15 @@ button:hover {
 
 @media (min-width: 1300px) {
   html {
-    font-size: 62.5%; }
+    font-size: 62.5%;
+    color: #0F1108; }
   body {
     font: 1.6rem/1 "Times New Roman", Times, serif;
     background: #E8EBE4; }
   header {
     background: #3C91E6;
     height: 10rem;
-    position: relative;
-    bottom: 2.5rem; }
+    margin-top: 0; }
   header h1 {
     padding-top: 3rem;
     margin-left: 5%;
@@ -120,7 +124,7 @@ button:hover {
     flex-direction: row;
     justify-content: space-between; }
   article img {
-    bottom: .45;
+    bottom: 1em;
     width: 25px;
     height: 25px; }
   article .date {
