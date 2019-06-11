@@ -1,17 +1,9 @@
 // main.scss
-$margin-left: 1rem;
-$padding-left: 2rem;
-$secondary-color: #3C91E6;
-$off-Color: #fff;
-$body-color: #E8EBE4;
-$text-color: #0F1108;
-$botmarg: 2rem;
-$font-family: "Times New Roman", Times, serif;
 
-@mixin font($fontsize,$color) {
-    font-size: $fontsize;
-    color: $color;
-}
+@import 'utils/vars';
+@import 'utils/mixins';
+@import 'utils/placeholders';
+
 html{
     @include font(14px, $text-color);
 
@@ -19,12 +11,14 @@ html{
 body{
     font: $font-family; 
     background: $body-color;
+    @extend %center-element;
 }
 header{
     background: $secondary-color;
     height: 7rem;
     width: 100%;
-    margin-top: 0;
+    margin-top: 0rem;
+
     
 }
 header h1{
@@ -157,7 +151,7 @@ button:hover{
     header{
         background: $secondary-color;
         height: 10rem;
-        margin-top: 0;
+        margin-top: 2rem;
     }
     header h1{
         padding-top:3rem;
