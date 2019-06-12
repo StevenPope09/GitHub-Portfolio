@@ -34,7 +34,7 @@ article {
   padding-right: 2rem;
   margin-bottom: 2rem; }
 
-#tasks #heading {
+#tasks .heading {
   display: flex;
   justify-content: space-between; }
 
