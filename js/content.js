@@ -15,7 +15,7 @@ fetch(url)
         }
     })
     .then(data => {
-        console.log(data[0].items);
+        
         const backlog = document.querySelector('#backlog')
         if (backlog) {
             var backlogTags = '';
@@ -34,10 +34,11 @@ fetch(url)
                 backlogTags += '<p><time class="date" datetime="2018-10-05">' + data[0].items[i].dueDate + '</time></p>';
                 backlogTags += '</div>';
                 backlogTags += '</article>';
-
+                
             }
-
             backlog.innerHTML = backlogTags;
+            
+            
         }
         const implementation = document.querySelector('#implementation');
         if (implementation) {
@@ -59,6 +60,7 @@ fetch(url)
                 imp += '</article>';
 
             }
+            
             implementation.innerHTML = imp;
         }
 
@@ -82,7 +84,9 @@ fetch(url)
                 comp += '</article>';
 
             }
+            
             complete.innerHTML = comp;
+            button();
         }
     })
     .catch(err => {
