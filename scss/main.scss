@@ -12,6 +12,7 @@ body{
     font: $font-family; 
     background: $body-color;
     @extend %center-element;
+    
 }
 header{
     background: $secondary-color;
@@ -41,6 +42,8 @@ article{
     padding-left: $padding-left;
     padding-right: $padding-left;
     margin-bottom: $botmarg;
+    
+    
 }
 #tasks .heading{
     
@@ -49,6 +52,7 @@ article{
 
 }
 #tasks{
+    margin-right: 2em;
     @media(min-width:600px){
         
         margin-right: 2em;

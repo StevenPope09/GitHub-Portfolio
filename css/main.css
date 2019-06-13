@@ -38,9 +38,11 @@ article {
   display: flex;
   justify-content: space-between; }
 
-@media (min-width: 600px) {
-  #tasks {
-    margin-right: 2em; } }
+#tasks {
+  margin-right: 2em; }
+  @media (min-width: 600px) {
+    #tasks {
+      margin-right: 2em; } }
 
 @media (mind-width: 1300px) {
   #tasks div {
