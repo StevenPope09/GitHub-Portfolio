@@ -6,85 +6,85 @@ const url = `${base}/lists?accessToken=${key}`;
 
 
 fetch(url)
-.then(response =>{
-    if (response.ok){
-        return response.json()
-        
-    }else{
-        throw response
-    }
-})
-.then(data =>{
-    console.log(data[0].items);
-    const backlog = document.querySelector('#backlog')
-    if(backlog){
-        var backlogTags = '';
+    .then(response => {
+        if (response.ok) {
+            return response.json()
 
-        backlogTags+='<div class="heading">';
-        backlogTags+='<h2>'+data[0].title+'</h2>';
-        backlogTags+='<p><button>'+'Add Task'+'</button></p>';
-        backlogTags+='</div>';
-
-        for(var i = 0; i < data[0].items.length; i++){
-            backlogTags+='<article>';
-            backlogTags+='<h3>'+data[0].items[i].title+'</h3>';
-            backlogTags+='<p>'+data[0].items[i].description+'</p>';            
-            backlogTags+='<div>';
-            backlogTags+='<img src="images/calendar.png" alt="calendar icon">';
-            backlogTags+='<p><time class="date" datetime="2018-10-05">'+data[0].items[i].dueDate+'</time></p>';
-            backlogTags+='</div>';
-            backlogTags+='</article>';
-    
+        } else {
+            throw response
         }
-        
-        backlog.innerHTML= backlogTags;
-    }
-    const implementation = document.querySelector('#implementation');
-    if(implementation){
-        var imp = '';
+    })
+    .then(data => {
+        console.log(data[0].items);
+        const backlog = document.querySelector('#backlog')
+        if (backlog) {
+            var backlogTags = '';
 
-        imp+='<div class="heading">';
-        imp+='<h2>'+data[1].title+'</h2>';
-        imp+='<p><button>'+'Add Task'+'</button></p>';
-        imp+='</div>';
+            backlogTags += '<div class="heading">';
+            backlogTags += '<h2>' + data[0].title + '</h2>';
+            backlogTags += '<p><button>' + 'Add Task' + '</button></p>';
+            backlogTags += '</div>';
 
-        for(var i = 0; i < data[1].items.length; i++){
-            imp+='<article>';
-            imp+='<h3>'+data[1].items[i].title+'</h3>';
-            imp+='<p>'+data[1].items[i].description+'</p>';            
-            imp+='<div>';
-            imp+='<img src="images/calendar.png" alt="calendar icon">';
-            imp+='<p><time class="date" datetime="2018-10-05">'+data[1].items[i].dueDate+'</time></p>';
-            imp+='</div>';
-            imp+='</article>';
-    
+            for (var i = 0; i < data[0].items.length; i++) {
+                backlogTags += '<article>';
+                backlogTags += '<h3>' + data[0].items[i].title + '</h3>';
+                backlogTags += '<p>' + data[0].items[i].description + '</p>';
+                backlogTags += '<div>';
+                backlogTags += '<img src="images/calendar.png" alt="calendar icon">';
+                backlogTags += '<p><time class="date" datetime="2018-10-05">' + data[0].items[i].dueDate + '</time></p>';
+                backlogTags += '</div>';
+                backlogTags += '</article>';
+
+            }
+
+            backlog.innerHTML = backlogTags;
         }
-        implementation.innerHTML = imp;
-    }     
-    
-    const complete = document.querySelector('#complete')
-    if(complete){
-        var comp = '';
+        const implementation = document.querySelector('#implementation');
+        if (implementation) {
+            var imp = '';
 
-        comp+='<div class="heading">';
-        comp+='<h2>'+data[2].title+'</h2>';
-        comp+='<p><button>'+'Add Task'+'</button></p>';
-        comp+='</div>';
+            imp += '<div class="heading">';
+            imp += '<h2>' + data[1].title + '</h2>';
+            imp += '<p><button>' + 'Add Task' + '</button></p>';
+            imp += '</div>';
 
-        for(var i = 0; i < data[2].items.length; i++){
-            comp+='<article>';
-            comp+='<h3>'+data[2].items[i].title+'</h3>';
-            comp+='<p>'+data[2].items[i].description+'</p>';            
-            comp+='<div>';
-            comp+='<img src="images/calendar.png" alt="calendar icon">';
-            comp+='<p><time class="date" datetime="2018-10-05">'+data[2].items[i].dueDate+'</time></p>';
-            comp+='</div>';
-            comp+='</article>';
-    
+            for (var i = 0; i < data[1].items.length; i++) {
+                imp += '<article>';
+                imp += '<h3>' + data[1].items[i].title + '</h3>';
+                imp += '<p>' + data[1].items[i].description + '</p>';
+                imp += '<div>';
+                imp += '<img src="images/calendar.png" alt="calendar icon">';
+                imp += '<p><time class="date" datetime="2018-10-05">' + data[1].items[i].dueDate + '</time></p>';
+                imp += '</div>';
+                imp += '</article>';
+
+            }
+            implementation.innerHTML = imp;
         }
-        complete.innerHTML = comp;
-    }
-})
-.catch(err =>{
-    console.log(err)
-})
+
+        const complete = document.querySelector('#complete')
+        if (complete) {
+            var comp = '';
+
+            comp += '<div class="heading">';
+            comp += '<h2>' + data[2].title + '</h2>';
+            comp += '<p><button>' + 'Add Task' + '</button></p>';
+            comp += '</div>';
+
+            for (var i = 0; i < data[2].items.length; i++) {
+                comp += '<article>';
+                comp += '<h3>' + data[2].items[i].title + '</h3>';
+                comp += '<p>' + data[2].items[i].description + '</p>';
+                comp += '<div>';
+                comp += '<img src="images/calendar.png" alt="calendar icon">';
+                comp += '<p><time class="date" datetime="2018-10-05">' + data[2].items[i].dueDate + '</time></p>';
+                comp += '</div>';
+                comp += '</article>';
+
+            }
+            complete.innerHTML = comp;
+        }
+    })
+    .catch(err => {
+        console.log(err)
+    })
