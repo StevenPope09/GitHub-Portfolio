@@ -4,197 +4,229 @@
 @import 'utils/mixins';
 @import 'utils/placeholders';
 
-html{
+html {
     @include font(14px, $text-color);
 
 }
-body{
-    font: $font-family; 
+
+body {
+    font: $font-family;
     background: $body-color;
     @extend %center-element;
-    
+
 }
-header{
+
+header {
     background: $secondary-color;
     height: 7rem;
     width: 100%;
     margin-top: 0rem;
 
-    
+
 }
-header h1{
-    padding-top:3rem;
+
+header h1 {
+    padding-top: 3rem;
     margin-left: 5%;
     color: $off-Color;
 }
-article img{
-    
+
+article img {
+
     float: left;
     width: 15px;
     height: 15px;
     padding-right: 1em;
 }
 
-article{
-    
+article {
+
     border: 2px double gray;
     background-color: $off-Color;
     padding-left: $padding-left;
     padding-right: $padding-left;
     margin-bottom: $botmarg;
-    
-    
+
+
 }
-#tasks .heading{
-    
+
+#tasks .heading {
+
     display: flex;
     justify-content: space-between;
 
 }
-#tasks{
+
+#tasks {
     margin-right: 2em;
-    @media(min-width:600px){
-        
+
+    @media(min-width:600px) {
+
         margin-right: 2em;
     }
 }
-@media(mind-width:1300px){
-#tasks div{
-    display:flex;
-    flex-direction: row;
-    justify-content: space-between;
-} 
+
+@media(mind-width:1300px) {
+    #tasks div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }
 
-#tasks p{
+#tasks p {
     display: flex;
     word-wrap: break-word;
 }
-.date{
-    
+
+.date {
+
     color: green;
-    
+
 }
-#tasks section{
+
+#tasks section {
     max-width: 100%;
     margin-left: 2em;
-    
+
 }
-.wrapper{
+
+.wrapper {
     max-width: 1500px;
     margin: 0 auto;
 }
-button{
+
+button {
     background: $off-Color;
     color: #000;
 }
-button:hover{
+
+button:hover {
     background: #3C91E6;
     color: #fff;
 }
 
-@media(min-width:600px){
-    html{
-    @include font(16px, $text-color);
+@media(min-width:600px) {
+    html {
+        @include font(16px, $text-color);
     }
 
-    #tasks p{
+    #tasks p {
         word-wrap: none;
     }
 }
-@media(min-width: 800px){
-    html{
-    @include font(18px, $text-color);
+
+@media(min-width: 800px) {
+    html {
+        @include font(18px, $text-color);
     }
-    article{
+
+    article {
         max-width: calc(100%/3-2em);
     }
-    #tasks{
+
+    #tasks {
         display: flex;
         justify-content: space-between;
     }
-    #tasks section{
+
+    #tasks section {
         max-width: calc(100%/3 - 2rem);
         margin-left: 2rem;
     }
-    #tasks div{
-        display:flex;
+
+    #tasks div {
+        display: flex;
         flex-direction: row;
         justify-content: space-between;
-        
+
     }
-    article div{
+
+    article div {
         display: flex;
         justify-content: center;
     }
-    article{
+
+    article {
         position: relative;
     }
-    article img{
+
+    article img {
         position: absolute;
         left: 1em;
         bottom: 1em;
         width: 20px;
-        height:20px;
-        
+        height: 20px;
+
     }
-    .date{
+
+    .date {
         margin-left: 1em;
     }
-    
+
 }
-@media(min-width: 1300px){
-    html{
-        @include font(62.5%,$text-color);
-    
+
+@media(min-width: 1300px) {
+    html {
+        @include font(62.5%, $text-color);
+
     }
-    body{
+
+    body {
         font: 1.6rem/1 $font-family;
         background: $body-color;
     }
-    header{
+
+    header {
         background: $secondary-color;
         height: 10rem;
         margin-top: 2rem;
     }
-    header h1{
-        padding-top:3rem;
+
+    header h1 {
+        padding-top: 3rem;
         margin-left: 5%;
         color: $off-Color;
     }
-    #tasks div{
-        display:flex;
+
+    #tasks div {
+        display: flex;
         flex-direction: row;
         justify-content: space-between;
-        
+
     }
-    article img{
+
+    article img {
         bottom: 1em;
         width: 25px;
         height: 25px;
     }
-    
-    article .date{
+
+    article .date {
         display: flex;
         justify-content: flex-end;
     }
-    #tasks{
+
+    #tasks {
         display: flex;
         justify-content: space-between;
         flex-flow: row wrap;
     }
-    .date{
+
+    .date {
         display: flex;
         align-content: flex-end;
         margin-left: 2em;
     }
-    #tasks section{
+
+    #tasks section {
         max-width: calc(100%/3 - 2rem);
         margin-left: 2rem;
     }
-    .wrapper{
+
+    .wrapper {
         max-width: 1500px;
         margin: 0 auto;
     }
-    
+
 }
