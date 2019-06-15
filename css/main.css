@@ -76,9 +76,10 @@ button:hover {
 form {
   border: 2px solid gray;
   background: #fff;
-  padding: 1em,1em; }
+  padding: 1em, 1em; }
 
-textarea, input {
+textarea,
+input {
   padding-left: 3px;
   width: 55%;
   font-size: 16px;

@@ -105,13 +105,14 @@ button:hover {
     color: #fff;
 }
 
-form{
+form {
     border: 2px solid gray;
     background: $off-Color;
-    padding: 1em,1em
+    padding: 1em, 1em
 }
 
-textarea, input{
+textarea,
+input {
     padding-left: 3px;
     width: 55%;
     font-size: 16px;
@@ -122,7 +123,7 @@ textarea, input{
     word-wrap: wrap;
 }
 
-label{
+label {
     font-size: 20px;
     margin-bottom: .5em;
     margin-top: .5em;
@@ -130,10 +131,11 @@ label{
     margin-right: .25em;
 }
 
-#submit{
+#submit {
     margin-left: 20%;
 }
-#submit:hover{
+
+#submit:hover {
     background: #3C91E6;
     color: #fff;
 }
