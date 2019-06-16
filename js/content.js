@@ -22,7 +22,7 @@ fetch(url)
 
             backlogTags += '<div class="heading">';
             backlogTags += '<h2>' + data[0].title + '</h2>';
-            backlogTags += '<p><button>' + 'Add Task' + '</button></p>';
+            backlogTags += '<p><button class="newTaskButton">' + 'Add Task' + '</button></p>';
             backlogTags += '</div>';
 
             for (var i = 0; i < data[0].items.length; i++) {
@@ -46,7 +46,7 @@ fetch(url)
 
             imp += '<div class="heading">';
             imp += '<h2>' + data[1].title + '</h2>';
-            imp += '<p><button>' + 'Add Task' + '</button></p>';
+            imp += '<p><button class="newTaskButton">' + 'Add Task' + '</button></p>';
             imp += '</div>';
 
             for (var i = 0; i < data[1].items.length; i++) {
@@ -70,7 +70,7 @@ fetch(url)
 
             comp += '<div class="heading">';
             comp += '<h2>' + data[2].title + '</h2>';
-            comp += '<p><button>' + 'Add Task' + '</button></p>';
+            comp += '<p><button class="newTaskButton">' + 'Add Task' + '</button></p>';
             comp += '</div>';
 
             for (var i = 0; i < data[2].items.length; i++) {
