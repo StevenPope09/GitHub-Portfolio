@@ -4,7 +4,7 @@ const urlPost = `${base}/items?accessToken=${key}`;
 //function for event
 function newTasks(event, targetSectionId) {
     var element = document.querySelector(`section #${targetSectionId}`);
-    //console.log(targetSectionId);
+    console.log(targetSectionId);
     if (element) {
         var newEl = '';
         var newForm = document.querySelector('#taskForm');
@@ -44,9 +44,9 @@ function newTasks(event, targetSectionId) {
 
                     if (targetSectionId == 'backlog') {
                         listId = 1;
-                    } else if (targetSectionId = 'implementation') {
+                    } else if (targetSectionId == 'implementation') {
                         listId = 2;
-                    } else if (targetSectionId = 'complete') {
+                    } else if (targetSectionId == 'complete') {
                         listId = 3;
                     }
 
@@ -86,7 +86,7 @@ function newTasks(event, targetSectionId) {
                         .then(data => {
                             location.reload();
                             // handle json data
-                            //console.log(data);
+                            console.log(data);
                         })
                         .catch(error => {
                             // handle error
