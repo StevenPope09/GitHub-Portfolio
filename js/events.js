@@ -1,12 +1,15 @@
-//function for event
-function newTasks(event) {
-    var element = document.querySelector('section #backlog');
+//const url = base+'/items?accessToken='+key;
+const urlPost = `${base}/items?accessToken=${key}`;
 
+//function for event
+function newTasks(event, targetSectionId) {
+    var element = document.querySelector(`section #${targetSectionId}`);
+    //console.log(targetSectionId);
     if (element) {
         var newEl = '';
         var newForm = document.querySelector('#taskForm');
         if (!newForm) {
-            newEl += '<form action=" " method="POST" id="taskForm">';
+            newEl += '<form action="" method="POST" id="taskForm">';
 
             newEl += '<div>';
             newEl += '<label for="taskName">' + "Task Name:" + '</label><br>';
@@ -31,6 +34,68 @@ function newTasks(event) {
 
 
             element.insertAdjacentHTML("beforeend", newEl);
+
+            const form = document.querySelector('#taskForm');
+
+            if (form) {
+                form.addEventListener('submit', function (e) {
+
+                    e.preventDefault();
+
+                    if (targetSectionId == 'backlog') {
+                        listId = 1;
+                    } else if (targetSectionId = 'implementation') {
+                        listId = 2;
+                    } else if (targetSectionId = 'complete') {
+                        listId = 3;
+                    }
+
+                    const taskTitle = document.querySelector('#taskTitle');
+                    const taskDesc = document.querySelector('#description');
+                    const dueDate = document.querySelector('#dueDate');
+
+                    const formData = {
+
+                        title: taskTitle.value,
+                        description: taskDesc.value,
+                        dueDate: dueDate.value,
+                        listId: listId
+
+                    }
+
+                    const config = {
+
+                        method: 'POST',
+                        body: JSON.stringify(formData),
+                        headers: {
+                            'content-type': 'application/json'
+                        }
+                    }
+
+                    fetch(urlPost, config)
+
+                        .then(response => {
+
+                            if (response.ok) {
+
+                                return response.json();
+
+                            }
+                            throw response;
+                        })
+                        .then(data => {
+                            location.reload();
+                            // handle json data
+                            //console.log(data);
+                        })
+                        .catch(error => {
+                            // handle error
+                            console.log(error);
+                        });
+                    return false;
+                })
+
+            }
         }
     }
 
@@ -38,54 +103,21 @@ function newTasks(event) {
 
 //var to grab the buttons on the page
 function button() {
-    const tasks = document.querySelectorAll('button');
-    //console.log(tasks)
-    for (var i = 0; i < tasks.length; i++) {
-        tasks[i].addEventListener('click', newTasks);
+    //const submitButtons = document.querySelectorAll('button');
+    const sections = document.querySelectorAll('#tasks section');
+
+    //console.log(sections)
+
+    for (var i = 0; i < sections.length; i++) {
+        // TODO: Get the submit button inside of sections[i]
+        const submitButton = sections[i].querySelector('.newTaskButton');
+        //const submitButton = document.querySelector(sections[i].id + ' button');
+        const section = sections[i];
+        submitButton.addEventListener('click', function (e) {
+
+            newTasks(e, section.id);
+        });
     }
 }
 
-const myForm = document.querySelector('#submit');
-const form = document.querySelector('#taskForm');
-
-if (form) {
-    myForm.addEventListener('submit', function (e) {
-
-        const taskTitle = document.querySelector('#taskTitle');
-        const taskDesc = document.querySelector('#description');
-        const dueDate = document.querySelector('#dueDate');
-
-        const formData = {
-
-            title: taskTitle.value,
-            description: taskDesc.value,
-            dueDate: dueDate.value,
-
-        }
-        const config = {
-
-            method: 'POST',
-            body: JSON.stringify(formData),
-            headers: {
-                'content-type': 'application/json'
-            }
-        }
-        fetch(url, config)
-
-            .then(response => {
-
-                if (response.ok) {
-                    
-                    return response.json();
-                }
-                throw response;
-            })
-            .then(data => {
-                // handle json data
-            })
-            .catch(error => {
-                // handle error
-                console.error(error);
-            });
-    })
-}
+//const submitButton = document.querySelector('#submit');
