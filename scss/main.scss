@@ -65,7 +65,7 @@ article {
     }
 }
 
-@media(mind-width:1300px) {
+@media(min-width:1300px) {
     #tasks div {
         display: flex;
         flex-direction: row;
