@@ -4,16 +4,17 @@
 @import 'utils/mixins';
 @import 'utils/placeholders';
 
-header img{
+header img {
     display: block;
     float: right;
     margin-right: 15%;
     margin-top: 1em;
     width: 60px;
     height: 65px;
-    
+
 }
-header img:hover{
+
+header img:hover {
     cursor: pointer;
 }
 
@@ -55,8 +56,6 @@ textarea:valid {
 
 form div {
     display: block !important;
-
-
 }
 
 label {
@@ -81,7 +80,7 @@ html {
 }
 
 body {
-    font: $font-family;
+    font-family: $font-family;
     background-color: $body-color;
     @extend %center-element;
 
@@ -93,11 +92,11 @@ header {
     background-color: $secondary-color;
     height: 7rem;
     width: 100%;
-    
+
 }
 
 header h1 {
-   
+
     margin-left: 5%;
     color: $off-Color;
 }
@@ -117,6 +116,7 @@ article {
     padding-left: $padding-left;
     padding-right: $padding-left;
     margin-bottom: $botmarg;
+    height: auto;
 
 }
 
@@ -179,7 +179,7 @@ button:hover {
 form {
     border: 2px solid gray;
     background-color: $off-Color;
-    padding: 1em, 1em
+    padding: 1em;
 }
 
 textarea,
@@ -217,10 +217,6 @@ label {
     html {
         @include font(16px, $text-color);
     }
-
-    #tasks p {
-        word-wrap: none;
-    }
 }
 
 @media(min-width: 800px) {
@@ -229,7 +225,7 @@ label {
     }
 
     article {
-        max-width: calc(100%/3-2em);
+        max-width: calc(100%/3 - 2em);
     }
 
     #tasks {
@@ -284,12 +280,12 @@ label {
 
 @media(min-width: 1300px) {
     html {
-        @include font(62.5%, $text-color);
+        @include font(18px, $text-color);
 
     }
 
     body {
-        font: 1.6rem/1 $font-family;
+        font-family: $font-family;
         background-color: $body-color;
     }
 

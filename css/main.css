@@ -60,7 +60,7 @@ html {
   color: #0F1108; }
 
 body {
-  font: "Times New Roman", Times, serif;
+  font-family: "Times New Roman", Times, serif;
   background-color: #E8EBE4; }
 
 header {
@@ -85,7 +85,8 @@ article {
   background-color: #fff;
   padding-left: 2rem;
   padding-right: 2rem;
-  margin-bottom: 2rem; }
+  margin-bottom: 2rem;
+  height: auto; }
 
 #tasks .heading {
   display: flex;
@@ -129,7 +130,7 @@ button:hover {
 form {
   border: 2px solid gray;
   background-color: #fff;
-  padding: 1em, 1em; }
+  padding: 1em; }
 
 textarea,
 input {
@@ -157,16 +158,14 @@ label {
 @media (min-width: 600px) {
   html {
     font-size: 16px;
-    color: #0F1108; }
-  #tasks p {
-    word-wrap: none; } }
+    color: #0F1108; } }
 
 @media (min-width: 800px) {
   html {
     font-size: 18px;
     color: #0F1108; }
   article {
-    max-width: calc(100%/3-2em); }
+    max-width: calc(100%/3 - 2em); }
   #tasks {
     display: flex;
     justify-content: space-between; }
@@ -197,10 +196,10 @@ label {
 
 @media (min-width: 1300px) {
   html {
-    font-size: 62.5%;
+    font-size: 18px;
     color: #0F1108; }
   body {
-    font: 1.6rem/1 "Times New Roman", Times, serif;
+    font-family: "Times New Roman", Times, serif;
     background-color: #E8EBE4; }
   header {
     background-color: #3C91E6;
