@@ -4,28 +4,28 @@ const urlPost = `${base}/items?accessToken=${key}`;
 //function for event
 function newTasks(event, targetSectionId) {
     var element = document.querySelector(`section #${targetSectionId}`);
-    console.log(targetSectionId);
+    //console.log(targetSectionId);
     if (element) {
         var newEl = '';
         var newForm = document.querySelector('#taskForm');
         if (!newForm) {
-            newEl+= '<p>'+ "Please fill out all outlined sections below." +'<em>'+" (All are required to progress)"+ '</em>';
+            newEl += '<p>' + "Please fill out all outlined sections below." + '<em>' + "(All are required to progress)" + '</em>';
             newEl += '<form action="" method="POST" id="taskForm">';
-            newEl+='<p><em>'+"Minimum 4 characters for each input"+'</em></p>';
+            newEl += '<p><strong>' + "Minimum 4 characters for each input" + '</strong></p>';
 
             newEl += '<div>';
-            newEl += '<textarea type="text" name=taskName cols="93" rows="2" required id="taskTitle" minlength="4"></textarea>';        
-            newEl += '<label for="taskName" class=labelText>' + "Task Name" + '</label>';           
+            newEl += '<textarea type="text" name=taskName cols="93" rows="2" required id="taskTitle" minlength="4"></textarea>';
+            newEl += '<label for="taskName" class=labelText>' + "Task Name" + '</label>';
             newEl += '</div>';
-            
-            
-            newEl += '<div>';           
-            newEl += '<textarea type="text" name=taskDes cols="93" rows="2" required id="description" minlength="4"></textarea>';         
+
+
+            newEl += '<div>';
+            newEl += '<textarea type="text" name=taskDes cols="93" rows="2" required id="description" minlength="4"></textarea>';
             newEl += '<label for="taskDes" class=labelText>' + "Task Description" + '</label>';
             newEl += '</div>';
 
-            newEl += '<div>';  
-            newEl += '<input type="date" name=dueDate required id="dueDate">';           
+            newEl += '<div>';
+            newEl += '<input type="date" name=dueDate required id="dueDate">';
             newEl += '<label for="dueDate" class=labelText>' + "Due Date" + '</label>';
             newEl += '</div>';
 
@@ -44,12 +44,14 @@ function newTasks(event, targetSectionId) {
 
                     e.preventDefault();
 
+                    let listId = 0;
+
                     if (targetSectionId == 'backlog') {
-                        listId = 1;
+                         listId = 1;
                     } else if (targetSectionId == 'implementation') {
-                        listId = 2;
+                         listId = 2;
                     } else if (targetSectionId == 'complete') {
-                        listId = 3;
+                         listId = 3;
                     }
 
                     const taskTitle = document.querySelector('#taskTitle');
@@ -63,7 +65,7 @@ function newTasks(event, targetSectionId) {
                         dueDate: dueDate.value,
                         listId: listId
 
-                    }
+                    };
 
                     const config = {
 
@@ -72,7 +74,7 @@ function newTasks(event, targetSectionId) {
                         headers: {
                             'content-type': 'application/json'
                         }
-                    }
+                    };
 
                     fetch(urlPost, config)
 
@@ -88,14 +90,14 @@ function newTasks(event, targetSectionId) {
                         .then(data => {
                             location.reload();
                             // handle json data
-                            console.log(data);
+                            //console.log(data);
                         })
                         .catch(error => {
                             // handle error
                             console.log(error);
                         });
                     return false;
-                })
+                });
 
             }
         }
@@ -123,23 +125,27 @@ function button() {
 }
 
 const colorIcon = document.querySelector('header img');
+let iterator = 0;
 
-colorIcon.addEventListener('click',function(e){
+colorIcon.addEventListener('click', function (e) {
 
     const colors = [
         "Black",
         "Red",
         "#296EB4",
         "#3C91E6"
-    ]
-    const iterator = 0;
+    ];
+
     const headerElement = document.querySelector('header');
-   
-    headerElement.style.background = colors[iterator];
-    iterator++;
-    if(iterator > 4){
-        iterator = 0;
+
+    if (iterator <= 4) {
+        headerElement.style.background = colors[iterator];
+        iterator++;
+        if (iterator == 4) {
+            iterator = 0;
+        }
     }
+
     //localStorage.setItem('key value pair')
     /*
     for(var i = 0; i < colors.length; i++){
@@ -147,5 +153,5 @@ colorIcon.addEventListener('click',function(e){
     }
     */
 
-    
-})
+
+});

@@ -8,15 +8,15 @@ const url = `${base}/lists?accessToken=${key}`;
 fetch(url)
     .then(response => {
         if (response.ok) {
-            return response.json()
+            return response.json();
 
         } else {
-            throw response
+            throw response;
         }
     })
     .then(data => {
 
-        const backlog = document.querySelector('#backlog')
+        const backlog = document.querySelector('#backlog');
         if (backlog) {
             var backlogTags = '';
 
@@ -64,7 +64,7 @@ fetch(url)
             implementation.innerHTML = imp;
         }
 
-        const complete = document.querySelector('#complete')
+        const complete = document.querySelector('#complete');
         if (complete) {
             var comp = '';
 
@@ -90,5 +90,5 @@ fetch(url)
         }
     })
     .catch(err => {
-        console.log(err)
-    })
+        console.log(err);
+    });
