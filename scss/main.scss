@@ -4,6 +4,19 @@
 @import 'utils/mixins';
 @import 'utils/placeholders';
 
+header img{
+    display: block;
+    float: right;
+    margin-right: 15%;
+    margin-top: 1em;
+    width: 60px;
+    height: 65px;
+    
+}
+header img:hover{
+    cursor: pointer;
+}
+
 textarea:required {
 
     background-color: white;
@@ -75,16 +88,16 @@ body {
 }
 
 header {
+    display: flex;
+    justify-content: space-between;
     background-color: $secondary-color;
     height: 7rem;
     width: 100%;
-    margin-top: 0rem;
-
-
+    
 }
 
 header h1 {
-    padding-top: 3rem;
+   
     margin-left: 5%;
     color: $off-Color;
 }

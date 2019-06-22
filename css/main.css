@@ -3,6 +3,17 @@ body {
   margin-left: auto;
   margin-right: auto; }
 
+header img {
+  display: block;
+  float: right;
+  margin-right: 15%;
+  margin-top: 1em;
+  width: 60px;
+  height: 65px; }
+
+header img:hover {
+  cursor: pointer; }
+
 textarea:required {
   background-color: white;
   border: 1.5px solid red;
@@ -53,13 +64,13 @@ body {
   background-color: #E8EBE4; }
 
 header {
+  display: flex;
+  justify-content: space-between;
   background-color: #3C91E6;
   height: 7rem;
-  width: 100%;
-  margin-top: 0rem; }
+  width: 100%; }
 
 header h1 {
-  padding-top: 3rem;
   margin-left: 5%;
   color: #fff; }
 
