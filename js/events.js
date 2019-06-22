@@ -9,27 +9,29 @@ function newTasks(event, targetSectionId) {
         var newEl = '';
         var newForm = document.querySelector('#taskForm');
         if (!newForm) {
+            newEl+= '<p>'+ "Please fill out all outlined sections below." +'<em>'+" (All are required to progress)"+ '</em>';
             newEl += '<form action="" method="POST" id="taskForm">';
+            newEl+='<p><em>'+"Minimum 4 characters for each input"+'</em></p>';
 
             newEl += '<div>';
-            newEl += '<label for="taskName">' + "Task Name:" + '</label><br>';
-            newEl += '<textarea type="text" name=taskName cols="93" rows="2" required="required" id="taskTitle"></textarea>';
+            newEl += '<textarea type="text" name=taskName cols="93" rows="2" required id="taskTitle" minlength="4"></textarea>';        
+            newEl += '<label for="taskName" class=labelText>' + "Task Name" + '</label>';           
+            newEl += '</div>';
+            
+            
+            newEl += '<div>';           
+            newEl += '<textarea type="text" name=taskDes cols="93" rows="2" required id="description" minlength="4"></textarea>';         
+            newEl += '<label for="taskDes" class=labelText>' + "Task Description" + '</label>';
             newEl += '</div>';
 
-            newEl += '<div>';
-            newEl += '<label for="taskDes">' + "Task Description:" + '</label><br>';
-            newEl += '<textarea type="text" name=taskDes cols="93" rows="2" required="required" id="description"></textarea>';
-            newEl += '</div>';
-
-            newEl += '<div>';
-            newEl += '<label for="dueDate">' + "Due Date:" + '</label><br>';
-            newEl += '<input type="date" name=dueDate required="required" id="dueDate">';
+            newEl += '<div>';  
+            newEl += '<input type="date" name=dueDate required id="dueDate">';           
+            newEl += '<label for="dueDate" class=labelText>' + "Due Date" + '</label>';
             newEl += '</div>';
 
             newEl += '<div>';
             newEl += '<input type="submit" value="Submit" id="submit">';
             newEl += '</div>';
-
             newEl += '</form>';
 
 

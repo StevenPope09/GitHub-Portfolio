@@ -31,7 +31,7 @@ fetch(url)
                 backlogTags += '<p>' + data[0].items[i].description + '</p>';
                 backlogTags += '<div>';
                 backlogTags += '<img src="images/calendar.png" alt="calendar icon">';
-                backlogTags += '<p><time class="date" datetime="2018-10-05">' + data[0].items[i].dueDate + '</time></p>';
+                backlogTags += '<p><time class="date" datetime="'+data[0].items[i].dueDate+'">' + data[0].items[i].dueDate + '</time></p>';
                 backlogTags += '</div>';
                 backlogTags += '</article>';
 
@@ -55,7 +55,7 @@ fetch(url)
                 imp += '<p>' + data[1].items[i].description + '</p>';
                 imp += '<div>';
                 imp += '<img src="images/calendar.png" alt="calendar icon">';
-                imp += '<p><time class="date" datetime="2018-10-05">' + data[1].items[i].dueDate + '</time></p>';
+                imp += '<p><time class="date" datetime="'+data[1].items[i].dueDate+'">' + data[1].items[i].dueDate + '</time></p>';
                 imp += '</div>';
                 imp += '</article>';
 
@@ -79,7 +79,7 @@ fetch(url)
                 comp += '<p>' + data[2].items[i].description + '</p>';
                 comp += '<div>';
                 comp += '<img src="images/calendar.png" alt="calendar icon">';
-                comp += '<p><time class="date" datetime="2018-10-05">' + data[2].items[i].dueDate + '</time></p>';
+                comp += '<p><time class="date" datetime="'+data[2].items[i].dueDate+'">' + data[2].items[i].dueDate + '</time></p>';
                 comp += '</div>';
                 comp += '</article>';
 
