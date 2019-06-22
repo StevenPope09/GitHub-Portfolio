@@ -122,4 +122,30 @@ function button() {
     }
 }
 
-//const submitButton = document.querySelector('#submit');
+const colorIcon = document.querySelector('header img');
+
+colorIcon.addEventListener('click',function(e){
+
+    const colors = [
+        "Black",
+        "Red",
+        "#296EB4",
+        "#3C91E6"
+    ]
+    const iterator = 0;
+    const headerElement = document.querySelector('header');
+   
+    headerElement.style.background = colors[iterator];
+    iterator++;
+    if(iterator > 4){
+        iterator = 0;
+    }
+    //localStorage.setItem('key value pair')
+    /*
+    for(var i = 0; i < colors.length; i++){
+        headerElement.style.backgroundColor = colors[i];
+    }
+    */
+
+    
+})
