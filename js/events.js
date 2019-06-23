@@ -10,27 +10,27 @@ function newTasks(event, targetSectionId) {
         var newForm = document.querySelector('#taskForm');
         if (!newForm) {
             newEl += '<p>' + "Please fill out all outlined sections below." + '<em>' + "(All are required to progress)" + '</em>';
-            newEl += '<form action="" method="POST" id="taskForm">';
+            newEl += '<form action="" method="POST" id="taskForm" role="form">';
             newEl += '<p><strong>' + "Minimum 4 characters for each input" + '</strong></p>';
 
             newEl += '<div>';
-            newEl += '<textarea type="text" name=taskName cols="93" rows="2" required id="taskTitle" minlength="4"></textarea>';
+            newEl += '<textarea type="text" aria-label="Task Name" name=taskName cols="93" rows="2" required id="taskTitle" minlength="4"></textarea>';
             newEl += '<label for="taskName" class=labelText>' + "Task Name" + '</label>';
             newEl += '</div>';
 
 
             newEl += '<div>';
-            newEl += '<textarea type="text" name=taskDes cols="93" rows="2" required id="description" minlength="4"></textarea>';
+            newEl += '<textarea type="text" aria-label="Task Description" name=taskDes cols="93" rows="2" required id="description" minlength="4" ></textarea>';
             newEl += '<label for="taskDes" class=labelText>' + "Task Description" + '</label>';
             newEl += '</div>';
 
             newEl += '<div>';
-            newEl += '<input type="date" name=dueDate required id="dueDate">';
+            newEl += '<input type="date" name=dueDate required id="dueDate" aria-label="Due Date">';
             newEl += '<label for="dueDate" class=labelText>' + "Due Date" + '</label>';
             newEl += '</div>';
 
             newEl += '<div>';
-            newEl += '<input type="submit" value="Submit" id="submit">';
+            newEl += '<input type="submit" value="Submit" id="submit" aria-label="Add new task">';
             newEl += '</div>';
             newEl += '</form>';
 
@@ -47,11 +47,11 @@ function newTasks(event, targetSectionId) {
                     let listId = 0;
 
                     if (targetSectionId == 'backlog') {
-                         listId = 1;
+                        listId = 1;
                     } else if (targetSectionId == 'implementation') {
-                         listId = 2;
+                        listId = 2;
                     } else if (targetSectionId == 'complete') {
-                         listId = 3;
+                        listId = 3;
                     }
 
                     const taskTitle = document.querySelector('#taskTitle');
@@ -125,7 +125,12 @@ function button() {
 }
 
 const colorIcon = document.querySelector('header img');
-let iterator = 0;
+
+const headerColor = document.querySelector('header');
+const color = localStorage.getItem('backgroundColor');
+headerColor.style.backgroundColor = color;
+
+let iterator = 3;
 
 colorIcon.addEventListener('click', function (e) {
 
@@ -139,19 +144,12 @@ colorIcon.addEventListener('click', function (e) {
     const headerElement = document.querySelector('header');
 
     if (iterator <= 4) {
-        headerElement.style.background = colors[iterator];
         iterator++;
         if (iterator == 4) {
             iterator = 0;
         }
     }
 
-    //localStorage.setItem('key value pair')
-    /*
-    for(var i = 0; i < colors.length; i++){
-        headerElement.style.backgroundColor = colors[i];
-    }
-    */
-
-
+    headerElement.style.backgroundColor = colors[iterator];
+    localStorage.setItem('backgroundColor', colors[iterator]);
 });
