@@ -123,26 +123,47 @@ function button() {
         });
     }
 }
-
+// var to grab the chenge color icon
 const colorIcon = document.querySelector('header img');
 
+//vars to grab the elements we need to set styles on
 const headerColor = document.querySelector('header');
-const color = localStorage.getItem('backgroundColor');
-headerColor.style.backgroundColor = color;
+const bodyColor = document.querySelector('body');
 
+//Set the styles for the elements using local storage vars
+const color = localStorage.getItem('backgroundColor');
+const bodColor = localStorage.getItem('bodyColor');
+
+//set styles
+headerColor.style.backgroundColor = color;
+bodyColor.style.backgroundColor = bodColor;
+
+//create iterator for looping through array
 let iterator = 3;
 
+//click event on icon
 colorIcon.addEventListener('click', function (e) {
 
+    //arrays for header and body colors
     const colors = [
         "Black",
-        "Red",
+        "#91171F",
         "#296EB4",
-        "#3C91E6"
+        "#3C91E6",
     ];
 
-    const headerElement = document.querySelector('header');
+    const colors2 = [
+        "#799496",
+        "#C9DAEA",
+        "#9191E9",
+        "#E8EBE4"
+    ];
 
+    //vars to grab elements
+    const headerElement = document.querySelector('header');
+    const bodyEl = document.querySelector('body');
+
+    // iterator increase/reset
     if (iterator <= 4) {
         iterator++;
         if (iterator == 4) {
@@ -150,6 +171,11 @@ colorIcon.addEventListener('click', function (e) {
         }
     }
 
+    //set background colors on elements
     headerElement.style.backgroundColor = colors[iterator];
+    bodyEl.style.backgroundColor = colors2[iterator];
+
+    //store colors in local storage
+    localStorage.setItem('bodyColor', colors2[iterator]);
     localStorage.setItem('backgroundColor', colors[iterator]);
 });
