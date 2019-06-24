@@ -8,7 +8,7 @@ header img {
     display: block;
     float: right;
     margin-right: 15%;
-    margin-top: 3.5em;
+    margin-top: .5em;
     width: 60px;
     height: 65px;
 
@@ -80,9 +80,11 @@ html {
 }
 
 body {
+    margin-top: 0;
     font-family: $font-family;
     background-color: $body-color;
     @extend %center-element;
+
 
 }
 
@@ -92,6 +94,7 @@ header {
     background-color: $secondary-color;
     height: 7rem;
     width: 100%;
+
 
 }
 
@@ -226,10 +229,6 @@ label {
         @include font(18px, $text-color);
     }
 
-    article {
-        //max-width: calc(100%/3 - 2em);
-    }
-
     #tasks {
         display: flex;
         justify-content: space-between;
@@ -287,14 +286,25 @@ label {
     }
 
     body {
+        margin-top: 0;
         font-family: $font-family;
         background-color: $body-color;
+    }
+
+    header img {
+        display: block;
+        float: right;
+        margin-right: 15%;
+        margin-top: 3.5em;
+        width: 60px;
+        height: 65px;
+
     }
 
     header {
         background-color: $secondary-color;
         height: 10rem;
-        margin-top: 2rem;
+        margin-bottom: 2rem;
     }
 
     header h1 {

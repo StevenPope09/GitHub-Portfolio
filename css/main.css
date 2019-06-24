@@ -7,7 +7,7 @@ header img {
   display: block;
   float: right;
   margin-right: 15%;
-  margin-top: 3.5em;
+  margin-top: .5em;
   width: 60px;
   height: 65px; }
 
@@ -60,6 +60,7 @@ html {
   color: #0F1108; }
 
 body {
+  margin-top: 0;
   font-family: "Times New Roman", Times, serif;
   background-color: #E8EBE4; }
 
@@ -197,12 +198,20 @@ label {
     font-size: 18px;
     color: #0F1108; }
   body {
+    margin-top: 0;
     font-family: "Times New Roman", Times, serif;
     background-color: #E8EBE4; }
+  header img {
+    display: block;
+    float: right;
+    margin-right: 15%;
+    margin-top: 3.5em;
+    width: 60px;
+    height: 65px; }
   header {
     background-color: #3C91E6;
     height: 10rem;
-    margin-top: 2rem; }
+    margin-bottom: 2rem; }
   header h1 {
     padding-top: 3rem;
     margin-left: 5%;
