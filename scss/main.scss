@@ -4,29 +4,102 @@
 @import 'utils/mixins';
 @import 'utils/placeholders';
 
+header img {
+    display: block;
+    float: right;
+    margin-right: 15%;
+    margin-top: .5em;
+    width: 60px;
+    height: 65px;
+
+}
+
+header img:hover {
+    cursor: pointer;
+}
+
+textarea:required {
+
+    background-color: white;
+    border: 1.5px solid red;
+    color: #000;
+
+}
+
+textarea:valid {
+    background-color: $off-Color;
+    color: #000;
+    border: 2px solid black;
+
+    +label:after {
+        content: '(✔)';
+        color: green;
+    }
+}
+
+#dueDate:required {
+    background-color: white;
+    border: 1.5px solid red;
+    color: #000;
+}
+
+#dueDate:valid {
+    background-color: $off-Color;
+    color: #000;
+    border: 2px solid black;
+
+    +label:after {
+        content: ' (✔)';
+        color: green;
+    }
+}
+
+form div {
+    display: block !important;
+}
+
+label {
+    width: 8.5em;
+
+}
+
+form label {
+    display: block !important;
+    float: left !important;
+}
+
+form p {
+    font-size: 16px;
+    margin-left: 3%;
+    margin-bottom: 1.5em;
+}
+
 html {
     @include font(14px, $text-color);
 
 }
 
 body {
-    font: $font-family;
-    background: $body-color;
+    margin-top: 0;
+    font-family: $font-family;
+    background-color: $body-color;
     @extend %center-element;
+
 
 }
 
 header {
-    background: $secondary-color;
+    display: flex;
+    justify-content: space-between;
+    background-color: $secondary-color;
     height: 7rem;
     width: 100%;
-    margin-top: 0rem;
 
 
 }
 
 header h1 {
-    padding-top: 3rem;
+
     margin-left: 5%;
     color: $off-Color;
 }
@@ -47,6 +120,7 @@ article {
     padding-right: $padding-left;
     margin-bottom: $botmarg;
 
+
 }
 
 #tasks .heading {
@@ -65,7 +139,7 @@ article {
     }
 }
 
-@media(mind-width:1300px) {
+@media(min-width:1300px) {
     #tasks div {
         display: flex;
         flex-direction: row;
@@ -96,47 +170,50 @@ article {
 }
 
 button {
-    background: $off-Color;
+    background-color: $off-Color;
     color: #000;
 }
 
 button:hover {
-    background: #3C91E6;
+    background-color: #3C91E6;
     color: #fff;
 }
 
 form {
     border: 2px solid gray;
-    background: $off-Color;
-    padding: 1em, 1em
+    background-color: $off-Color;
+    padding: 1em;
 }
 
 textarea,
 input {
+
     padding-left: 3px;
-    width: 55%;
+    width: 80%;
     font-size: 16px;
-    margin-bottom: .5em;
+    //margin-bottom: .5em;
     margin-top: .5em;
-    margin-right: .25em;
+    margin-left: 1em;
     border: 2px solid black;
-    word-wrap: wrap;
+
 }
 
 label {
-    font-size: 20px;
-    margin-bottom: .5em;
-    margin-top: .5em;
-    margin-left: .25em;
-    margin-right: .25em;
+
+    font-size: 18px;
+    margin-bottom: 2em;
+    margin-top: .2em;
+    margin-left: 1em;
+
 }
 
 #submit {
-    margin-left: 20%;
+    margin-top: 2em;
+    width: 30%;
 }
 
 #submit:hover {
-    background: #3C91E6;
+    background-color: #3C91E6;
     color: #fff;
 }
 
@@ -144,19 +221,11 @@ label {
     html {
         @include font(16px, $text-color);
     }
-
-    #tasks p {
-        word-wrap: none;
-    }
 }
 
 @media(min-width: 800px) {
     html {
         @include font(18px, $text-color);
-    }
-
-    article {
-        max-width: calc(100%/3-2em);
     }
 
     #tasks {
@@ -194,6 +263,15 @@ label {
 
     }
 
+    form div {
+        display: block;
+
+    }
+
+    form label {
+        display: block;
+    }
+
     .date {
         margin-left: 1em;
     }
@@ -202,19 +280,30 @@ label {
 
 @media(min-width: 1300px) {
     html {
-        @include font(62.5%, $text-color);
+        @include font(18px, $text-color);
 
     }
 
     body {
-        font: 1.6rem/1 $font-family;
-        background: $body-color;
+        margin-top: 0;
+        font-family: $font-family;
+        background-color: $body-color;
+    }
+
+    header img {
+        display: block;
+        float: right;
+        margin-right: 15%;
+        margin-top: 3.5em;
+        width: 60px;
+        height: 65px;
+
     }
 
     header {
-        background: $secondary-color;
+        background-color: $secondary-color;
         height: 10rem;
-        margin-top: 2rem;
+        margin-bottom: 2rem;
     }
 
     header h1 {
@@ -254,7 +343,7 @@ label {
     }
 
     #tasks section {
-        max-width: calc(100%/3 - 2rem);
+        max-width: calc(100%/3 - 2em);
         margin-left: 2rem;
     }
 
