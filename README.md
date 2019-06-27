@@ -26,7 +26,7 @@ ________________________________________________________________________________
 ## Project Overview
 This month we were tasked to build a kanban board or a task manager to lay out taks that a user has defined. We have a Backlog, Implementation and a Complete column that users can add to and build upon (further functionality will come at a later date).
 
-Feel free to reach out to me at sjpope@student.fullsail.edu with any questions or concerens you may have about the site and if you're having any issues with the Set-Up portion above.
+Feel free to reach out to me at sjpope@student.fullsail.edu with any questions or concerns you may have about the site and if you're having any issues with the Set-Up portion above.
 
 ____________________________________________________________________________________________________________________________________________________________________________
 
