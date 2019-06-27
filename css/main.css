@@ -3,6 +3,9 @@ body {
   margin-left: auto;
   margin-right: auto; }
 
+table {
+  position: absolute; }
+
 header img {
   display: block;
   float: right;
@@ -95,9 +98,14 @@ article {
   display: flex;
   justify-content: space-between; }
 
+#tasks article {
+  transition: .5s; }
+
+#tasks article:hover {
+  transform: scale(1.1); }
+
 #tasks {
-  margin-right: 2em;
-  animation: slideIn 1.2s ease-out; }
+  margin-right: 2em; }
   @media (min-width: 600px) {
     #tasks {
       margin-right: 2em; } }
@@ -156,7 +164,8 @@ label {
 
 #submit {
   margin-top: 2em;
-  width: 30%; }
+  width: 30%;
+  margin-left: 3.5em; }
 
 #submit:hover {
   background-color: #3C91E6;
@@ -165,7 +174,10 @@ label {
 @media (min-width: 600px) {
   html {
     font-size: 16px;
-    color: #0F1108; } }
+    color: #0F1108; }
+  #submit {
+    margin-top: 4.0em;
+    margin-left: 2.5em; } }
 
 @media (min-width: 800px) {
   html {
@@ -174,13 +186,11 @@ label {
   #tasks {
     display: flex;
     justify-content: space-between; }
+  #submit {
+    width: 35%; }
   #tasks section {
     max-width: calc(100%/3 - 2rem);
     margin-left: 2rem; }
-  #tasks article {
-    transition: .5s; }
-  #tasks article:hover {
-    transform: scale(1.1); }
   #tasks div {
     display: flex;
     flex-direction: row;
@@ -253,7 +263,10 @@ label {
     margin-left: 2rem; }
   .wrapper {
     max-width: 1500px;
-    margin: 0 auto; } }
+    margin: 0 auto; }
+  #submit {
+    margin-top: 3.5em;
+    margin-left: 3.5em; } }
 
 @keyframes flipUp {
   from {
