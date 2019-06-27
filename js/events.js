@@ -4,11 +4,13 @@ const urlPost = `${base}/items?accessToken=${key}`;
 //function for event
 function newTasks(event, targetSectionId) {
     var element = document.querySelector(`section #${targetSectionId}`);
-    //console.log(targetSectionId);
+    
     if (element) {
         var newEl = '';
         var newForm = document.querySelector('#taskForm');
+        
         if (!newForm) {
+
             newEl += '<p>' + "Please fill out all outlined sections below." + '<em>' + "(All are required to progress)" + '</em>';
             newEl += '<form action="" method="POST" id="taskForm" role="form">';
             newEl += '<p><strong>' + "Minimum 4 characters for each input" + '</strong></p>';
@@ -36,10 +38,11 @@ function newTasks(event, targetSectionId) {
 
 
             element.insertAdjacentHTML("beforeend", newEl);
-
+            
             const form = document.querySelector('#taskForm');
 
             if (form) {
+                
                 form.addEventListener('submit', function (e) {
 
                     e.preventDefault();
@@ -108,14 +111,14 @@ function newTasks(event, targetSectionId) {
 //var to grab the buttons on the page
 function button() {
     //const submitButtons = document.querySelectorAll('button');
-    const sections = document.querySelectorAll('#tasks section');
+    
 
-    //console.log(sections)
+    const sections = document.querySelectorAll('#tasks section');
 
     for (var i = 0; i < sections.length; i++) {
         // TODO: Get the submit button inside of sections[i]
         const submitButton = sections[i].querySelector('.newTaskButton');
-        //const submitButton = document.querySelector(sections[i].id + ' button');
+        
         const section = sections[i];
         submitButton.addEventListener('click', function (e) {
 
