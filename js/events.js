@@ -25,8 +25,8 @@ function newTasks(event, targetSectionId) {
             newEl += '</div>';
 
             newEl += '<div>';
-            newEl += '<input type="date" name=dueDate required id="dueDate" aria-label="Due Date">';
-            newEl += '<label for="dueDate" class=labelText>' + "Due Date" + '</label>';
+            newEl += '<input type="date" date-format="mm/dd/yyyy" name=dueDate required minlength="10" id="dueDate" aria-label="Due Date">';
+            newEl += '<label for="dueDate" class=labelText>' + "Due Date (MM/DD/YYYY)" + '</label>';
             newEl += '</div>';
 
             newEl += '<div>';
@@ -179,3 +179,4 @@ colorIcon.addEventListener('click', function (e) {
     localStorage.setItem('bodyColor', colors2[iterator]);
     localStorage.setItem('backgroundColor', colors[iterator]);
 });
+
