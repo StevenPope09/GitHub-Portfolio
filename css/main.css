@@ -9,10 +9,12 @@ header img {
   margin-right: 15%;
   margin-top: .5em;
   width: 60px;
-  height: 65px; }
+  height: 65px;
+  transition: .8s; }
 
 header img:hover {
-  cursor: pointer; }
+  cursor: pointer;
+  transform: scale(1.5); }
 
 textarea:required {
   background-color: white;
@@ -69,7 +71,8 @@ header {
   justify-content: space-between;
   background-color: #3C91E6;
   height: 7rem;
-  width: 100%; }
+  width: 100%;
+  perspective: 1000px; }
 
 header h1 {
   margin-left: 5%;
@@ -93,7 +96,8 @@ article {
   justify-content: space-between; }
 
 #tasks {
-  margin-right: 2em; }
+  margin-right: 2em;
+  animation: slideIn 1.2s ease-out; }
   @media (min-width: 600px) {
     #tasks {
       margin-right: 2em; } }
@@ -119,13 +123,16 @@ article {
   max-width: 1500px;
   margin: 0 auto; }
 
-button {
+#tasks button {
   background-color: #fff;
-  color: #000; }
+  color: #000;
+  transition: background-color .7s ease-in, transform .5s .25s ease; }
 
-button:hover {
+#tasks button:hover {
+  cursor: pointer;
   background-color: #3C91E6;
-  color: #fff; }
+  color: #fff;
+  transform: scale(1.2); }
 
 form {
   border: 2px solid gray;
@@ -170,6 +177,10 @@ label {
   #tasks section {
     max-width: calc(100%/3 - 2rem);
     margin-left: 2rem; }
+  #tasks article {
+    transition: .5s; }
+  #tasks article:hover {
+    transform: scale(1.1); }
   #tasks div {
     display: flex;
     flex-direction: row;
@@ -210,11 +221,14 @@ label {
   header {
     background-color: #3C91E6;
     height: 10rem;
-    margin-bottom: 2rem; }
+    margin-bottom: 2rem;
+    perspective: 800px;
+    transition: .8s; }
   header h1 {
     padding-top: 3rem;
     margin-left: 5%;
-    color: #fff; }
+    color: #fff;
+    animation: flipUp 1s both; }
   #tasks div {
     display: flex;
     flex-direction: row;
@@ -240,3 +254,9 @@ label {
   .wrapper {
     max-width: 1500px;
     margin: 0 auto; } }
+
+@keyframes flipUp {
+  from {
+    transform: rotateX(90deg); }
+  to {
+    transform: rotateX(0deg); } }

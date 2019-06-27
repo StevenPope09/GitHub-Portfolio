@@ -4,6 +4,8 @@
 @import 'utils/mixins';
 @import 'utils/placeholders';
 
+
+
 header img {
     display: block;
     float: right;
@@ -12,10 +14,13 @@ header img {
     width: 60px;
     height: 65px;
 
+    transition: .8s;
+
 }
 
 header img:hover {
     cursor: pointer;
+    transform: scale(1.5);
 }
 
 textarea:required {
@@ -94,6 +99,7 @@ header {
     background-color: $secondary-color;
     height: 7rem;
     width: 100%;
+    perspective: 1000px;
 
 
 }
@@ -133,6 +139,8 @@ article {
 #tasks {
     margin-right: 2em;
 
+    animation: slideIn 1.2s ease-out;
+
     @media(min-width:600px) {
 
         margin-right: 2em;
@@ -169,14 +177,19 @@ article {
     margin: 0 auto;
 }
 
-button {
+#tasks button {
     background-color: $off-Color;
     color: #000;
+
+    transition: background-color .7s ease-in, transform .5s .25s ease;
 }
 
-button:hover {
+#tasks button:hover {
+    cursor: pointer;
     background-color: #3C91E6;
     color: #fff;
+
+    transform: scale(1.2);
 }
 
 form {
@@ -231,11 +244,24 @@ label {
     #tasks {
         display: flex;
         justify-content: space-between;
+
     }
+
+
 
     #tasks section {
         max-width: calc(100%/3 - 2rem);
         margin-left: 2rem;
+
+
+    }
+
+    #tasks article {
+        transition: .5s;
+    }
+
+    #tasks article:hover {
+        transform: scale(1.1);
     }
 
     #tasks div {
@@ -304,13 +330,19 @@ label {
         background-color: $secondary-color;
         height: 10rem;
         margin-bottom: 2rem;
+        perspective: 800px;
+        transition: .8s;
     }
 
     header h1 {
         padding-top: 3rem;
         margin-left: 5%;
         color: $off-Color;
+
+        animation: flipUp 1s both;
     }
+
+
 
     #tasks div {
         display: flex;
@@ -352,4 +384,14 @@ label {
         margin: 0 auto;
     }
 
+}
+
+@keyframes flipUp {
+    from {
+        transform: rotateX(90deg);
+    }
+
+    to {
+        transform: rotateX(0deg);
+    }
 }
