@@ -13,11 +13,11 @@ ________________________________________________________________________________
 
 ## Set-Up
 
-Step 1. Open your code editor and create a new project folder.
+Step 1. In a destination of your choosing be sure to clone this repository using the "clone or download" button above.
 
-Step 2. Open your terminal and navigate to your project folder. Oncer there run "npm install" to install the dependencies within the package.json file
+Step 2. Next open your terminal and navigate to your folder where you cloned the repo. Once there run "npm install" to install the dependencies within the package.json file
 
-Step 3. Once those dependencies are installed navigate to your terminal once again (while in the project folder) and run "npm start". This command will pull in the dependencies needed for development.
+Step 3. Once those dependencies are installed navigate to your terminal once again (while in the project folder) and run "npm start". This command will pull in the dependencies needed for development and launch the site.
 
 Step 4. Feel free to use the site as needed and if there are changes made that are improvements/corerections feel free to open a pull request.
 
