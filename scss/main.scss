@@ -8,21 +8,31 @@ table {
     position: absolute;
 }
 
-header img {
+header button {
     display: block;
     float: right;
     margin-right: 15%;
-    margin-top: .5em;
+    margin-top: 1.75em;
     width: 60px;
     height: 65px;
-
+    background: none;
+    border: none;
+    outline: none;
     transition: .8s;
+
 
 }
 
 header img:hover {
     cursor: pointer;
+}
+
+header button:hover {
     transform: scale(1.5);
+}
+
+header button:visited {
+    border: none;
 }
 
 textarea:required {
