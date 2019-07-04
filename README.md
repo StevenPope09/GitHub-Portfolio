@@ -17,3 +17,12 @@ _______________________________________________________
 
 _______________________________________________________
  
+## Project 2
+ 
+### RockBand Page
+ 
+ - Band Page Template for potentail clinets who seek a site of the sort.
+ - Able to track tour dates, new singles, and bios on each band member.
+ - Blog section for the band to post their latest articles and keep their fan base involved.
+ - Contact page for fan base to reach out to the band and inquire on issues with site or just to reach out to the band. 
+_______________________________________________________
