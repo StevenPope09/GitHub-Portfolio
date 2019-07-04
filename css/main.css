@@ -3,16 +3,29 @@ body {
   margin-left: auto;
   margin-right: auto; }
 
-header img {
+table {
+  position: absolute; }
+
+header button {
   display: block;
   float: right;
   margin-right: 15%;
-  margin-top: .5em;
+  margin-top: 1.75em;
   width: 60px;
-  height: 65px; }
+  height: 65px;
+  background: none;
+  border: none;
+  outline: none;
+  transition: .8s; }
 
 header img:hover {
   cursor: pointer; }
+
+header button:hover {
+  transform: scale(1.5); }
+
+header button:visited {
+  border: none; }
 
 textarea:required {
   background-color: white;
@@ -69,7 +82,8 @@ header {
   justify-content: space-between;
   background-color: #3C91E6;
   height: 7rem;
-  width: 100%; }
+  width: 100%;
+  perspective: 1000px; }
 
 header h1 {
   margin-left: 5%;
@@ -91,6 +105,12 @@ article {
 #tasks .heading {
   display: flex;
   justify-content: space-between; }
+
+#tasks article {
+  transition: .5s; }
+
+#tasks article:hover {
+  transform: scale(1.1); }
 
 #tasks {
   margin-right: 2em; }
@@ -119,13 +139,16 @@ article {
   max-width: 1500px;
   margin: 0 auto; }
 
-button {
+#tasks button {
   background-color: #fff;
-  color: #000; }
+  color: #000;
+  transition: background-color .7s ease-in, transform .5s .25s ease; }
 
-button:hover {
+#tasks button:hover {
+  cursor: pointer;
   background-color: #3C91E6;
-  color: #fff; }
+  color: #fff;
+  transform: scale(1.2); }
 
 form {
   border: 2px solid gray;
@@ -149,7 +172,8 @@ label {
 
 #submit {
   margin-top: 2em;
-  width: 30%; }
+  width: 30%;
+  margin-left: 3.5em; }
 
 #submit:hover {
   background-color: #3C91E6;
@@ -158,7 +182,10 @@ label {
 @media (min-width: 600px) {
   html {
     font-size: 16px;
-    color: #0F1108; } }
+    color: #0F1108; }
+  #submit {
+    margin-top: 4.0em;
+    margin-left: 2.5em; } }
 
 @media (min-width: 800px) {
   html {
@@ -167,6 +194,8 @@ label {
   #tasks {
     display: flex;
     justify-content: space-between; }
+  #submit {
+    width: 35%; }
   #tasks section {
     max-width: calc(100%/3 - 2rem);
     margin-left: 2rem; }
@@ -210,11 +239,14 @@ label {
   header {
     background-color: #3C91E6;
     height: 10rem;
-    margin-bottom: 2rem; }
+    margin-bottom: 2rem;
+    perspective: 800px;
+    transition: .8s; }
   header h1 {
     padding-top: 3rem;
     margin-left: 5%;
-    color: #fff; }
+    color: #fff;
+    animation: flipUp 1s both; }
   #tasks div {
     display: flex;
     flex-direction: row;
@@ -239,4 +271,13 @@ label {
     margin-left: 2rem; }
   .wrapper {
     max-width: 1500px;
-    margin: 0 auto; } }
+    margin: 0 auto; }
+  #submit {
+    margin-top: 3.5em;
+    margin-left: 3.5em; } }
+
+@keyframes flipUp {
+  from {
+    transform: rotateX(90deg); }
+  to {
+    transform: rotateX(0deg); } }
