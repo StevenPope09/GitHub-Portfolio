@@ -25,4 +25,7 @@ _______________________________________________________
  - Able to track tour dates, new singles, and bios on each band member.
  - Blog section for the band to post their latest articles and keep their fan base involved.
  - Contact page for fan base to reach out to the band and inquire on issues with site or just to reach out to the band. 
+ 
+ See it @ the link provided:
+[RockBand](https://stevenpope09.github.io/RockBand/)
 _______________________________________________________
