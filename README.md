@@ -1,5 +1,8 @@
 # GitHub-Portfolio
 
+
+/Users/stevenpope/Desktop/Portfolio Logo.png
+
 _______________________________________________________
 
 ## Portfolio For Full Sail
