@@ -37,7 +37,7 @@ function newTasks(event, targetSectionId) {
             newEl += '</form>';
 
 
-            element.insertAdjacentHTML("beforeend", newEl);
+            element.insertAdjacentHTML("afterbegin", newEl);
 
             const form = document.querySelector('#taskForm');
 
