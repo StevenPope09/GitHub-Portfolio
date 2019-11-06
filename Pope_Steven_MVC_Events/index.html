@@ -1,0 +1,59 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/main.css">
+    <title>Steven Pope MVC Events Assignment</title>
+</head>
+
+<body>
+    <header class="container-fluid">
+        <h1>Vehicle Form!</h1>
+    </header>
+    <main class="container">
+        <section>
+            <h2>Please Fill out Form Below</h2>
+
+            <form>
+                    <div class="form-group">
+                            <label for="firstName">Car Make</label>
+                            <input type="text" class="form-control" id="carModel" placeholder="Car Model" required>
+                        </div>
+                <div class="form-group">
+                    <label for="firstName">Car Model</label>
+                    <input type="text" class="form-control" id="carName" placeholder="Car Name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="studentID">Car Year</label>
+                    <input type="text" class="form-control" id="carYear" placeholder="Car Year" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="studentGrades">Miles per Each Tank of Gas (numbers separated by commas)</label>
+                    <input type="text" class="form-control" id="milesPerTank" placeholder="Miles Per Tank" required>
+                </div>
+
+                <button type="submit" class="btn btn-light" id="enterButton">Enter/Add Vehicle Info</button>
+
+            </form>
+
+        </section>
+
+        <section id="carInfo">
+
+        </section>
+    </main>
+
+    <script src="bootstrap/jquery.slim.min.js"></script>
+    <script src="bootstrap/popper.min.js"></script>
+    <script src="bootstrap/bootstrap.min.js"></script>
+    <script src="js/utility.js"></script>
+    <script src="js/carDO.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+#heroInfo {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    border: 1px solid black;
+    background: #FBFBFF;
+    margin-top: 2%;
+    padding: 2%;
+    margin-bottom: 2%;
+    padding: 1%;
+}
+#heroInfo img{
+    margin-bottom: 2%;
+}
+#heroInfo h3{
+    text-align: center;
+    margin-top: 2%;
+}
+#heroInfo h4{
+    text-align: center;
+    margin-top: 2%;
+}
+#displayHeroes h2{
+    text-align: center;
+    font-weight: bold;
+}
+header h1{
+    text-align: center;
+    margin-bottom: 2%;
+    font-weight: bold;
+
+}
+button{
+    margin-top: 4%;
+}
+body{
+    background:url("../images/caShield.jpeg") fixed;
+    font-size: 1.25em;
+    font-family: fantasy;
+}
+#container {
+    background: #FBFBFF;
+    margin-top: 2%;
+    padding: 2%;
+}

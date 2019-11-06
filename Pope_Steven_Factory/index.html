@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/main.css">
+    <title>Steven Pope Factory Assignment</title>
+</head>
+
+<body>
+    <header class="container-fluid">
+        <h1>Vehicle Form!</h1>
+    </header>
+    <main class="container">
+        <section>
+            <div id="imagesTop" class="row">
+                <div class="col-6">
+                    <img class="img-fluid" src="/images/plane.jpg">
+                </div>
+                <div class="col-6">
+                    <img class="img-fluid" src="/images/boat.jpg">
+                </div>
+            </div>
+            <h2>Please Fill out Form Below</h2>
+            <div id="alertField">
+
+            </div>
+
+            <form id="form">
+                <div class="form-group">
+                    <label for="vehicleType">Vehicle Type (<em>Car, Truck, Plane, or Boat</em>)</label>
+                    <input type="text" class="form-control" id="vehicleType" placeholder="Vehicle Type" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="vehicleName">Vehicle Make</label>
+                    <input type="text" class="form-control" id="vehicleMake" placeholder="Vehicle Make" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="vehicleModel">Vehicle Model</label>
+                    <input type="text" class="form-control" id="vehicleModel" placeholder="Vehicle Model" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="vehicleYear">Vehicle Year</label>
+                    <input type="text" class="form-control" id="vehicleYear" placeholder="Vehicle Year" required>
+                </div>
+
+                <button type="submit" class="btn btn-dark" id="enterButton">Enter/Add Vehicle Info</button>
+                <button type="submit" class="btn btn-dark" id="viewButton">Display Vehicle Info</button>
+
+            </form>
+
+        </section>
+
+        <section id="vehicleInfo">
+
+        </section>
+        <div id="imagesBottom" class="row">
+                <div class="col-6">
+                    <img class="img-fluid" src="/images/car.jpg">
+                </div>
+                <div class="col-6">
+                    <img class="img-fluid" src="/images/truck.png">
+                </div>
+            </div>
+    </main>
+
+    <script src="bootstrap/jquery.slim.min.js"></script>
+    <script src="bootstrap/popper.min.js"></script>
+    <script src="bootstrap/bootstrap.min.js"></script>
+    <script src="js/utility.js"></script>
+    <script src="js/concreteClasses.js"></script>
+    <script src="js/factory.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

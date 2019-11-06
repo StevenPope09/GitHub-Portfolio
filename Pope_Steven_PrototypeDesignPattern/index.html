@@ -1,0 +1,90 @@
+<!-- Steven Pope -->
+<!-- Static Variable is in both my toon class and my supertoon class line 41 in toon and 36 in supertoon -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Steven Pope Week 2 Prototype Design Pattern</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div class="container" id="container">
+
+        <header>
+            <h1>Toon Creator!</h1>
+        </header>
+
+        <section id="formField">
+            <form id="toonForm">
+
+                <div class="form-group">
+                    <label for="toonName">Name</label>
+                    <input type="text" id="toonName" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="universe">Universe</label>
+                    <select class="form-control" id="universeSelect">
+                        <option>Marvel</option>
+                        <option>Capcom</option>
+                        <option>DC</option>
+                        <option>Valiant</option>
+                        <option>Millarworld</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="toonPowers">Attack Powers <br><em>(Numbers separated by , )</em></label>
+                    <input type="text" id="attackPowers" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="toonRole">Role</label>
+                    <select class="form-control" id="roleSelect">
+                        <option>Hero</option>
+                        <option>Side-Kick</option>
+                        <option>God</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="stoneName">Stone Name <em>(Infinity Stone)</em></label>
+                    <input type="text" id="stoneName" class="form-control" required=true>
+                </div>
+                <div class="form-group">
+                    <label for="toonPowers">Movie Host Location</label>
+                    <input type="text" id="movieLocation" class="form-control" value="Netflix" required>
+                </div>
+                <div class="form-group">
+                    <button id="addToon" type="button" class="btn btn-dark">Add Toon</button>
+                    <button id="showToons" type="button" class="btn btn-dark">Show Toons</button>
+                </div>
+
+            </form>
+        </section>
+        <section id="displayHeroes">
+        </section>
+        
+        <div id="fightScene" class="container">
+
+        </div>
+
+    </div>
+
+
+
+
+    <script src="bootstrap/jquery.slim.min.js"></script>
+    <script src="bootstrap/popper.min.js"></script>
+    <script src="bootstrap/bootstrap.min.js"></script>
+    <script src="js/utility.js"></script>
+    <script src="js/person.js"></script>
+    <script src="js/stone.js"></script>
+    <script src="js/toon.js"></script>
+    <script src="js/superToon.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
