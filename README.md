@@ -32,12 +32,15 @@ _______________________________________________________
 
 ## Project 3
 
-### Styled By Lysette
+### Style by Lysette
 
-- Use of Bootstrap in development of site
-- Smooth layout allows for easy navigation of site
-- Use of Lighthouse for image viewing is also used within site
-- Site is for hair stylist or other professionals to use to display their work and reach a further client base.
+- Hair page that showcases work done
+- Allows users to request services via form element
+- Use of bootstrap in HTML to build page
+- Use of Lightbox on images in site to show users bigger, cleaner images of the thumbnails on the site
+
+See it @ the link provided below
+[Style_by_Lysette](https://stevenpope09.github.io/StyleByLysette/index.html)
 _______________________________________________________
 
 ## Project 4 
